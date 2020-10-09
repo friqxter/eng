@@ -15,23 +15,7 @@ connection.once("open", ()=>{
 });
 const hospitalSchema= new mongoose.Schema({
   name: String,
-  age: String,
-  disease: String,
-  old_disease: String,
-  address: String
-});
-const Data = mongoose.model("Data",hospitalSchema);
-app.post("/message",function(req,res){
-  const data = new Data ({
-    name: req.body.name,
-    age: req.body.age,
-    disease: req.body.Current_Diseases,
-    old_disease: req.body.Old_Diseases,
-    address: req.body.Address
-  })
-  data.save(function(err){
-    if(err){
-      console.log(err)
+
 
 
     }
